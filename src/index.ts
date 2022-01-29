@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express"
-import bodyParser from "body-parser";
+import bodyParser from "body-parser"
+import mongoose from "mongoose"
 require("dotenv").config()
 
 const app = express()
@@ -7,22 +8,17 @@ const app = express()
 app.use(bodyParser.json())
 
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({
-    name: "jawad ali",
-    age: 25,
-    skills: "Ala"
+// connect to db
+const dbURL = process.env.DB_CONNECTION || ""
+mongoose.connect(dbURL, {
+  autoIndex: true
+}).then(() => {
+  console.log("DB Connected")
+
+  
+  // start server after connection with db
+  const port = process.env.PORT || 3000
+  app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`)
   })
-})
-
-app.post("/",(req:any, res: Response) => {
-  res.json(req.body)
-})
-
-
-
-// start server
-const port = process.env.PORT || 3000
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`)
 })
