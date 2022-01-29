@@ -1,3 +1,4 @@
+import { hashPassword } from "../core/crypt"
 import userModel, { IUser } from "./user.model"
 
 export default async () => {
@@ -5,7 +6,7 @@ export default async () => {
   userModel.create({
     name: "Jawad Ali",
     email: "ali@ali.com",
-    password: "123123123",
+    password: hashPassword("123123123"),
     statusText: "Don't Limit yourself"
   } as IUser)
 }
