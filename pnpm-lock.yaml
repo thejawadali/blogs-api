@@ -3,12 +3,14 @@ lockfileVersion: 5.3
 specifiers:
   '@types/body-parser': ^1.19.2
   '@types/express': github:types/express
+  '@types/express-validator': ^3.0.0
   '@types/mongoose': ^5.11.97
   '@types/node': ^17.0.13
   body-parser: ^1.19.1
   crypto: ^1.0.1
   dotenv: ^14.3.2
   express: ^4.17.2
+  express-validator: ^6.14.0
   mongoose: ^6.1.8
   nodemon: ^2.0.15
   ts-node: ^10.4.0
@@ -19,11 +21,13 @@ dependencies:
   crypto: 1.0.1
   dotenv: 14.3.2
   express: 4.17.2
+  express-validator: 6.14.0
   mongoose: 6.1.8
 
 devDependencies:
   '@types/body-parser': 1.19.2
   '@types/express': github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220_@types+node@17.0.13
+  '@types/express-validator': 3.0.0
   '@types/mongoose': 5.11.97
   '@types/node': 17.0.13
   nodemon: 2.0.15
@@ -83,6 +87,13 @@ packages:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
       '@types/node': 17.0.13
+    dev: true
+
+  /@types/express-validator/3.0.0:
+    resolution: {integrity: sha512-LusnB0YhTXpBT25PXyGPQlK7leE1e41Vezq1hHEUwjfkopM1Pkv2X2Ppxqh9c+w/HZ6Udzki8AJotKNjDTGdkQ==}
+    deprecated: This is a stub types definition for express-validator (https://github.com/ctavan/express-validator). express-validator provides its own type definitions, so you don't need @types/express-validator installed!
+    dependencies:
+      express-validator: 6.14.0
     dev: true
 
   /@types/mongoose/5.11.97:
@@ -463,6 +474,13 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  /express-validator/6.14.0:
+    resolution: {integrity: sha512-ZWHJfnRgePp3FKRSKMtnZVnD1s8ZchWD+jSl7UMseGIqhweCo1Z9916/xXBbJAa6PrA3pUZfkOvIsHZG4ZtIMw==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      lodash: 4.17.21
+      validator: 13.7.0
+
   /express/4.17.2:
     resolution: {integrity: sha512-oxlxJxcQlYwqPWKVJJtvQiwHgosH/LrLSPA+H4UxpyvSS6jC5aH+5MoHFM+KABgTOt0APue4w66Ha8jCUo9QGg==}
     engines: {node: '>= 0.10.0'}
@@ -748,6 +766,9 @@ packages:
     dependencies:
       package-json: 6.5.0
     dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
   /lowercase-keys/1.0.1:
     resolution: {integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==}
@@ -1318,6 +1339,10 @@ packages:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
     dev: false
+
+  /validator/13.7.0:
+    resolution: {integrity: sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==}
+    engines: {node: '>= 0.10'}
 
   /vary/1.1.2:
     resolution: {integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=}
