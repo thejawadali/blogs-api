@@ -41,4 +41,41 @@ router.post("/register",
     })
   })
 
+// user login
+router.post("/login",
+  [
+    body("email", "unique email is required").exists(),
+    body("password").exists().isLength({
+      min: 8,
+      max: 32
+    })
+  ], errorChecker,
+  async (req: any, res: any) => {
+    try {
+      const user = await userModel.findOne({
+        email: req.body.email,
+        password: hashPassword(req.body.password)
+      })
+      if (!user) {
+        return res.status(400).send("No user found with given credentials")
+      }
+
+      const token = JWT({
+        _a: user._id,
+        _b: user.email
+      })
+
+
+      res.json({
+        user: {
+          ...user.toJSON(),
+          password: undefined
+        },
+        token
+      })
+    } catch (error) {
+      res.json(error)
+    }
+  })
+
 export default router
