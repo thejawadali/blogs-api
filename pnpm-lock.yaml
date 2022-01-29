@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/express': github:types/express
   express: ^4.17.2
   nodemon: ^2.0.15
   ts-node: ^10.4.0
@@ -10,6 +11,7 @@ dependencies:
   express: 4.17.2
 
 devDependencies:
+  '@types/express': github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220
   nodemon: 2.0.15
   ts-node: 10.4.0_typescript@4.5.5
   typescript: 4.5.5
@@ -629,6 +631,10 @@ packages:
     resolution: {integrity: sha512-VjSeb/lHmkoyd8ryPVIKvOCn4D1koMqY+vqyjjUfc3xyKtP4dYOxM44sZrnqQSzSds3xyOrUTLTC9LVCVgLngw==}
     dev: true
 
+  /isarray/0.0.1:
+    resolution: {integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=}
+    dev: true
+
   /json-buffer/3.0.0:
     resolution: {integrity: sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=}
     dev: true
@@ -1180,4 +1186,31 @@ packages:
   /yn/3.1.1:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
+    dev: true
+
+  github.com/pillarjs/path-to-regexp/ec285ed3500aed455df59e3b8b07f473412918a4:
+    resolution: {tarball: https://codeload.github.com/pillarjs/path-to-regexp/tar.gz/ec285ed3500aed455df59e3b8b07f473412918a4}
+    name: path-to-regexp
+    version: 1.5.3
+    dependencies:
+      isarray: 0.0.1
+    dev: true
+
+  github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220:
+    resolution: {tarball: https://codeload.github.com/types/express/tar.gz/7670cf1cbce96b3159e3ff04a253926b34111220}
+    name: '@types/express'
+    version: 4.14.0
+    peerDependencies:
+      '@types/node': '*'
+    dependencies:
+      '@types/serve-static': github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0
+      path-to-regexp: github.com/pillarjs/path-to-regexp/ec285ed3500aed455df59e3b8b07f473412918a4
+    dev: true
+
+  github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0:
+    resolution: {tarball: https://codeload.github.com/types/npm-serve-static/tar.gz/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0}
+    name: '@types/serve-static'
+    version: 1.11.1
+    peerDependencies:
+      '@types/node': '*'
     dev: true
