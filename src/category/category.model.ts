@@ -14,7 +14,9 @@ const schema = new Schema({
   createdBy: {
     type: Schema.Types.ObjectId,
     ref: userModel.modelName,
-    autopopulate: true,
+    autopopulate: {
+      select: "name"
+    },
     requried: true,
   },
 }, {
