@@ -1,5 +1,6 @@
-import express, { Request, Response } from "express"
 import bodyParser from "body-parser"
+import express from "express"
+import seeding from "./seeding";
 import mongoose from "mongoose"
 require("dotenv").config()
 
@@ -15,7 +16,8 @@ mongoose.connect(dbURL, {
 }).then(() => {
   console.log("DB Connected")
 
-  
+  // data seeding
+  seeding()
   // start server after connection with db
   const port = process.env.PORT || 3000
   app.listen(port, () => {
