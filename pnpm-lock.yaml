@@ -2,18 +2,22 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/express': github:types/express
+  '@types/node': ^17.0.13
+  dotenv: ^14.3.2
   express: ^4.17.2
   nodemon: ^2.0.15
   ts-node: ^10.4.0
   typescript: ^4.5.5
 
 dependencies:
+  dotenv: 14.3.2
   express: 4.17.2
 
 devDependencies:
-  '@types/express': github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220
+  '@types/express': github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220_@types+node@17.0.13
+  '@types/node': 17.0.13
   nodemon: 2.0.15
-  ts-node: 10.4.0_typescript@4.5.5
+  ts-node: 10.4.0_40146b36d18138e3202fbb722e5f65e4
   typescript: 4.5.5
 
 packages:
@@ -56,6 +60,10 @@ packages:
 
   /@tsconfig/node16/1.0.2:
     resolution: {integrity: sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==}
+    dev: true
+
+  /@types/node/17.0.13:
+    resolution: {integrity: sha512-Y86MAxASe25hNzlDbsviXl8jQHb0RDvKt4c40ZJQ1Don0AAL0STLZSs4N+6gLEO55pedy7r2cLwS+ZDxPm/2Bw==}
     dev: true
 
   /abbrev/1.1.1:
@@ -334,6 +342,11 @@ packages:
     dependencies:
       is-obj: 2.0.0
     dev: true
+
+  /dotenv/14.3.2:
+    resolution: {integrity: sha512-vwEppIphpFdvaMCaHfCEv9IgwcxMljMw2TnAQBB4VWPvzXQLTb82jwmdOKzlEVUL3gNFT4l4TPKO+Bn+sqcrVQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /duplexer3/0.1.4:
     resolution: {integrity: sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=}
@@ -1038,7 +1051,7 @@ packages:
       nopt: 1.0.10
     dev: true
 
-  /ts-node/10.4.0_typescript@4.5.5:
+  /ts-node/10.4.0_40146b36d18138e3202fbb722e5f65e4:
     resolution: {integrity: sha512-g0FlPvvCXSIO1JDF6S232P5jPYqBkRL9qly81ZgAOSU7rwI0stphCgd2kLiCrU9DjQCrJMWEqcNSjQL02s6d8A==}
     hasBin: true
     peerDependencies:
@@ -1057,6 +1070,7 @@ packages:
       '@tsconfig/node12': 1.0.9
       '@tsconfig/node14': 1.0.1
       '@tsconfig/node16': 1.0.2
+      '@types/node': 17.0.13
       acorn: 8.7.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -1196,21 +1210,26 @@ packages:
       isarray: 0.0.1
     dev: true
 
-  github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220:
+  github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220_@types+node@17.0.13:
     resolution: {tarball: https://codeload.github.com/types/express/tar.gz/7670cf1cbce96b3159e3ff04a253926b34111220}
+    id: github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220
     name: '@types/express'
     version: 4.14.0
     peerDependencies:
       '@types/node': '*'
     dependencies:
-      '@types/serve-static': github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0
+      '@types/node': 17.0.13
+      '@types/serve-static': github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0_@types+node@17.0.13
       path-to-regexp: github.com/pillarjs/path-to-regexp/ec285ed3500aed455df59e3b8b07f473412918a4
     dev: true
 
-  github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0:
+  github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0_@types+node@17.0.13:
     resolution: {tarball: https://codeload.github.com/types/npm-serve-static/tar.gz/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0}
+    id: github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0
     name: '@types/serve-static'
     version: 1.11.1
     peerDependencies:
       '@types/node': '*'
+    dependencies:
+      '@types/node': 17.0.13
     dev: true
