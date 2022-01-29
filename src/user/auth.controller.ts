@@ -1,6 +1,6 @@
 import { Router } from "express"
 import { body } from "express-validator"
-import { JWT } from "../core/authorization"
+import { Authorize, JWT } from "../core/authorization"
 import { hashPassword } from "../core/crypt"
 import { errorChecker, uniqueUser } from "../core/middlewares"
 import userModel, { IUser } from "./user.model"
@@ -77,5 +77,12 @@ router.post("/login",
       res.json(error)
     }
   })
+
+router.get("/me", Authorize, (req: any, res: any)=> {
+  res.json({
+    ...req.user.toJSON(),
+    password: undefined
+  })
+})
 
 export default router
