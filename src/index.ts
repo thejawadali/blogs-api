@@ -1,9 +1,10 @@
 import express, { Request, Response } from "express"
+import bodyParser from "body-parser";
 require("dotenv").config()
 
 const app = express()
 
-const port = process.env.PORT || 3000
+app.use(bodyParser.json())
 
 
 app.get("/", (req: Request, res: Response) => {
@@ -14,6 +15,14 @@ app.get("/", (req: Request, res: Response) => {
   })
 })
 
+app.post("/",(req:any, res: Response) => {
+  res.json(req.body)
+})
+
+
+
+// start server
+const port = process.env.PORT || 3000
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`)
 })
