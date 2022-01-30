@@ -8,7 +8,7 @@ require("dotenv").config()
 const app = express()
 
 app.use(bodyParser.json())
-
+app.use("/", express.static(__dirname + "/../public/uploads"))
 
 // connect to db
 const dbURL = process.env.DB_CONNECTION || ""

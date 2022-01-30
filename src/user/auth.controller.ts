@@ -2,12 +2,14 @@ import { Router } from "express"
 import { body } from "express-validator"
 import { Authorize, JWT } from "../core/authorization"
 import { hashPassword } from "../core/crypt"
+import { uploadSingle } from "../core/fileUploader"
 import { errorChecker, uniqueUser } from "../core/middlewares"
 import userModel, { IUser } from "./user.model"
 
+
 const router = Router()
 
-router.post("/register",
+router.post("/register", uploadSingle("profilePic"),
   [
     body("name", "Name is required").exists(),
     body("email", "Enter valid email").isEmail().exists(),
@@ -16,13 +18,12 @@ router.post("/register",
       max: 32
     })
   ], errorChecker, uniqueUser, async (req: any, res: any) => {
-
     const newUser = new userModel({
       name: req.body.name,
       email: req.body.email,
       password: hashPassword(req.body.password),
       statusText: req.body.statusText,
-      profilePic: req.file ? req.file.path : ""
+      profilePic: req.file ? "images/"+req.file.filename : ""
     } as unknown as IUser)
 
     await newUser.save()

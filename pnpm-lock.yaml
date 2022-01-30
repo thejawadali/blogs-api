@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/body-parser': ^1.19.2
-  '@types/express': github:types/express
+  '@types/express': ^4.17.13
   '@types/express-validator': ^3.0.0
   '@types/jsonwebtoken': ^8.5.8
   '@types/lodash': ^4.14.178
@@ -37,7 +37,7 @@ dependencies:
 
 devDependencies:
   '@types/body-parser': 1.19.2
-  '@types/express': github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220_@types+node@17.0.13
+  '@types/express': 4.17.13
   '@types/express-validator': 3.0.0
   '@types/jsonwebtoken': 8.5.8
   '@types/lodash': 4.14.178
@@ -859,6 +859,7 @@ packages:
 
   /isarray/0.0.1:
     resolution: {integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=}
+    dev: false
 
   /isarray/1.0.0:
     resolution: {integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=}
@@ -1666,36 +1667,4 @@ packages:
   /yn/3.1.1:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
-    dev: true
-
-  github.com/pillarjs/path-to-regexp/ec285ed3500aed455df59e3b8b07f473412918a4:
-    resolution: {tarball: https://codeload.github.com/pillarjs/path-to-regexp/tar.gz/ec285ed3500aed455df59e3b8b07f473412918a4}
-    name: path-to-regexp
-    version: 1.5.3
-    dependencies:
-      isarray: 0.0.1
-    dev: true
-
-  github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220_@types+node@17.0.13:
-    resolution: {tarball: https://codeload.github.com/types/express/tar.gz/7670cf1cbce96b3159e3ff04a253926b34111220}
-    id: github.com/types/express/7670cf1cbce96b3159e3ff04a253926b34111220
-    name: '@types/express'
-    version: 4.14.0
-    peerDependencies:
-      '@types/node': '*'
-    dependencies:
-      '@types/node': 17.0.13
-      '@types/serve-static': github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0_@types+node@17.0.13
-      path-to-regexp: github.com/pillarjs/path-to-regexp/ec285ed3500aed455df59e3b8b07f473412918a4
-    dev: true
-
-  github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0_@types+node@17.0.13:
-    resolution: {tarball: https://codeload.github.com/types/npm-serve-static/tar.gz/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0}
-    id: github.com/types/npm-serve-static/c1f96843c8b96a37f6c534cb1dadb48f5329e4e0
-    name: '@types/serve-static'
-    version: 1.11.1
-    peerDependencies:
-      '@types/node': '*'
-    dependencies:
-      '@types/node': 17.0.13
     dev: true
