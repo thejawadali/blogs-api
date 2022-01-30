@@ -1,7 +1,7 @@
 import { model, Document, Schema } from "mongoose"
 import categoryModel, { ICategory } from "../category/category.model"
 import userModel, { IUser } from "../user/user.model"
-
+import autopopulate from "mongoose-autopopulate"
 
 
 export interface IComment extends Document {
@@ -79,5 +79,6 @@ const schema = new Schema({
   timestamps: true
 })
 
+schema.plugin(autopopulate)
 
 export default model<IBlog>("Blog", schema)
