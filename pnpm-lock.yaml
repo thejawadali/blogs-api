@@ -13,6 +13,7 @@ specifiers:
   crypto: ^1.0.1
   dotenv: ^14.3.2
   express: ^4.17.2
+  express-async-errors: ^3.1.1
   express-validator: ^6.14.0
   jsonwebtoken: ^8.5.1
   lodash: ^4.17.21
@@ -28,6 +29,7 @@ dependencies:
   crypto: 1.0.1
   dotenv: 14.3.2
   express: 4.17.2
+  express-async-errors: 3.1.1_express@4.17.2
   express-validator: 6.14.0
   jsonwebtoken: 8.5.1
   lodash: 4.17.21
@@ -586,6 +588,14 @@ packages:
   /etag/1.8.1:
     resolution: {integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /express-async-errors/3.1.1_express@4.17.2:
+    resolution: {integrity: sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng==}
+    peerDependencies:
+      express: ^4.16.2
+    dependencies:
+      express: 4.17.2
     dev: false
 
   /express-validator/6.14.0:
